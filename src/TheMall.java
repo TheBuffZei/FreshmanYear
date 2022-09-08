@@ -42,34 +42,45 @@ public class TheMall {
 
         //list of items available
         //kids
-        String k_aisle1 = "Hoodies for 1000 Credits";
-        String k_aisle2 = "Pajamas for 800 Credits";
-        String k_aisle3 = "Trousers for 700 Credits";
-        String k_aisle4 = "Denim Wear for 1200 Credits";
-        String k_aisle5 = "Shirts for 650 Credits";
-        String k_aisle6 = "Shirts for 700 Credits";
-        String k_aisle7 = "Footwear for 600 Credits";
+        int k_hoodies = 1000;
+        int k_pajamas = 800;
+        int k_trousers = 700;
+        int k_denim_outfit = 1200;
+        int k_shirts_skirts = 700;
+        int k_footwear = 800;
         //ladies
-        String l_aisle1 = "Skirts for 800 Credits";
-        String l_aisle2 = "Kurtas for 500 Credits";
-        String l_aisle3 = "Pajamas for 900 Credits";
-        String l_aisle4 = "Sarees for 300 Credits";
+        int l_skirts = 900;
+        int l_kurta = 600;
+        int l_pyjama = 900;
+        int l_saree = 300;
         //designer
-        String d_aisle1 = "Half Sarees for 3000 Credits";
-        String d_aisle2= "Lehangas for 5500 Credits";
-        String d_aisle3 = "Pattu Sarees for 30000 Credits";
+        int d_halfSaree = 6000;
+        int d_lehenga = 7500;
+        int d_pattuSaree = 30000;
         //mens
-        String m_aisle1 = "Jeans for 1500 Credits";
-        String m_aisle2 = "Shirts for 1000 Credits";
-        String m_aisle3 = "Kurtas for 1000 Credits";
-        String m_aisle4 = "Coats for 3500 Credits";
-        String m_aisle5= "Ties for 500 Credits";
-        String m_aisle6 = "Footwear for 1000 Credits";
+        int m_jeans = 1500;
+        int m_shirts = 1000;
+        int m_kurtas = 1000;
+        int m_suits = 4000;
+        int m_ties = 500;
+        int m_footwear = 1300;
 
         //output the items available
         if(f == 1) {
             System.out.println("In the Kids Section, we have:");
-            System.out.println("Aisle 1: "+k_aisle1+"\nAisle 2: "+k_aisle2+"\nAisle 3: "+k_aisle3+"\nAisle 4: "+k_aisle4);
+            System.out.println("Aisle 1: Hoodies for "+k_hoodies+" Credits \nAisle 2: Pajamas for "+k_pajamas+" Credits \nAisle 3: Shirts + Skirts for "+k_shirts_skirts+" Credits \nAisle 4: Trousers for "+k_trousers+" Credits \nAisle 5: Denim Wear for "+k_denim_outfit+" Credits \nAisle 6: Footwear for "+k_footwear+" Credits");
+        }
+        else if(f == 2) {
+            System.out.println("In the Ladies Section, we have: ");
+            System.out.println("Aisle 1: Skirts for "+l_skirts+" Credits \nAisle 2: Sarees for "+l_saree+" Credits \nAisle 3: Kurtas for "+l_kurta+" Credits \n Aisle 4: Pyjamas for "+l_pyjama+" Credits");
+        }
+        else if(f == 3) {
+            System.out.println("In the Designer Sarees Section, we have:");
+            System.out.println("Aisle 1: Half Sarees for "+d_halfSaree+" Credits \nAisle 2: Lehengas for "+d_lehenga+" Credits \nAisle 3: Pattu Sarees for "+d_pattuSaree+" Credits");
+        }
+        else if(f == 4) {
+            System.out.println("In the Men's Section, we have:");
+            System.out.println("Aisle 1: Shirts for "+m_shirts+" Credits \nAisle 2: Jeans for "+m_jeans+" Credits \nAisle 3: Suits for "+m_suits+" Credits \nAisle 4: Ties for "+m_ties+" Credits \n Aisle 5: Kurtas for "+m_kurtas+" Credits \nAisle 6: Footwear for "+m_footwear+" Credits");
         }
     }
 }
