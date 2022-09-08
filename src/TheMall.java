@@ -3,7 +3,7 @@ import java.util.*;
 
 //code
 public class TheMall {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         //declare floors as variables
         String flr1 = "Ground Floor: Kids Wear";
         String flr2 = "First Floor: Ladies Wear";
@@ -39,8 +39,7 @@ public class TheMall {
         else{
             System.out.println("We currently do not have that amount of floors, sorry.");
         }
-
-        //list of items available
+/*list of items available
         int k_hoodies = 1000;
         int k_pajamas = 880;
         int k_shirts = 700;
@@ -64,7 +63,7 @@ public class TheMall {
         int m_coats = 0;
         int m_ties = 0;
         int m_footwear = 0;
-
+*/
         //output the items available
 
     }
