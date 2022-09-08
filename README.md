@@ -1,4 +1,4 @@
-# Grade9
+# Freshman Year
 random java files I created during Freshman Year 
 
 they contain all kinds of stuff, curricular and extra-curricular
