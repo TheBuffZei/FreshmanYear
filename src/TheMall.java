@@ -1,3 +1,7 @@
+/**
+ * This program is inspired from a Question in my 9th Grade Computer Science Book:
+ */
+
 //imports
 import java.util.*;
 
@@ -5,13 +9,14 @@ import java.util.*;
 public class TheMall {
     public static void main(String[] args) {
         //declare floors as variables
-        String flr1 = "Ground Floor: Kids Wear";
-        String flr2 = "First Floor: Ladies Wear";
-        String flr3 = "Second Floor: Designer Sarees";
-        String flr4 = "Third Floor: Men's Wear";
+        String flr1 = "[1]Ground Floor: Kids Wear";
+        String flr2 = "[2]First Floor: Ladies Wear";
+        String flr3 = "[3]Second Floor: Designer Sarees";
+        String flr4 = "[4]Third Floor: Men's Wear";
 
         //entrance message
-        Scanner inFloor = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        System.out.println("***INPUT ONLY INT***");
         System.out.println("Welcome to The Mall, where we serve all your fashion needs.");
         System.out.println("We currently have:");
         System.out.println(flr1);
@@ -21,7 +26,7 @@ public class TheMall {
 
         //input floor
         System.out.println("Which floor would you like to go? ");
-        int f = inFloor.nextInt();
+        int f = in.nextInt();
 
         //display floor
         if(f == 1) {
@@ -38,6 +43,7 @@ public class TheMall {
         }
         else{
             System.out.println("We currently do not have that amount of floors, sorry");
+            System.exit(0);
         }
 
         //list of items available
@@ -68,19 +74,50 @@ public class TheMall {
         //output the items available
         if(f == 1) {
             System.out.println("In the Kids Section, we have:");
-            System.out.println("Aisle 1: Hoodies for "+k_hoodies+" Credits \nAisle 2: Pajamas for "+k_pajamas+" Credits \nAisle 3: Shirts + Skirts for "+k_shirts_skirts+" Credits \nAisle 4: Trousers for "+k_trousers+" Credits \nAisle 5: Denim Wear for "+k_denim_outfit+" Credits \nAisle 6: Footwear for "+k_footwear+" Credits");
+            System.out.println("[1]Aisle 1: Hoodies for "+k_hoodies+" Credits \n[2]Aisle 2: Pajamas for "+k_pajamas+" Credits \n[3]Aisle 3: Shirts + Skirts for "+k_shirts_skirts+" Credits \n[4]Aisle 4: Trousers for "+k_trousers+" Credits \n[5]Aisle 5: Denim Wear for "+k_denim_outfit+" Credits \n[6]Aisle 6: Footwear for "+k_footwear+" Credits");
         }
         else if(f == 2) {
             System.out.println("In the Ladies Section, we have: ");
-            System.out.println("Aisle 1: Skirts for "+l_skirts+" Credits \nAisle 2: Sarees for "+l_saree+" Credits \nAisle 3: Kurtas for "+l_kurta+" Credits \n Aisle 4: Pyjamas for "+l_pyjama+" Credits");
+            System.out.println("[1]Aisle 1: Skirts for "+l_skirts+" Credits \n[2]Aisle 2: Sarees for "+l_saree+" Credits \n[3]Aisle 3: Kurtas for "+l_kurta+" Credits \n[4]Aisle 4: Pyjamas for "+l_pyjama+" Credits");
         }
         else if(f == 3) {
             System.out.println("In the Designer Sarees Section, we have:");
-            System.out.println("Aisle 1: Half Sarees for "+d_halfSaree+" Credits \nAisle 2: Lehengas for "+d_lehenga+" Credits \nAisle 3: Pattu Sarees for "+d_pattuSaree+" Credits");
+            System.out.println("[1]Aisle 1: Half Sarees for "+d_halfSaree+" Credits \n[2]Aisle 2: Lehengas for "+d_lehenga+" Credits \n[3]Aisle 3: Pattu Sarees for "+d_pattuSaree+" Credits");
         }
-        else if(f == 4) {
+        else {
             System.out.println("In the Men's Section, we have:");
-            System.out.println("Aisle 1: Shirts for "+m_shirts+" Credits \nAisle 2: Jeans for "+m_jeans+" Credits \nAisle 3: Suits for "+m_suits+" Credits \nAisle 4: Ties for "+m_ties+" Credits \n Aisle 5: Kurtas for "+m_kurtas+" Credits \nAisle 6: Footwear for "+m_footwear+" Credits");
+            System.out.println("[1]Aisle 1: Shirts for "+m_shirts+" Credits \n[2]Aisle 2: Jeans for "+m_jeans+" Credits \n[3]Aisle 3: Suits for "+m_suits+" Credits \n[4]Aisle 4: Ties for "+m_ties+" Credits \n[5]Aisle 5: Kurtas for "+m_kurtas+" Credits \n[6]Aisle 6: Footwear for "+m_footwear+" Credits");
+        }
+        System.out.println("Where would you like to go?");
+        int a = in.nextInt();
+
+        if(a == 1 && f == 1){
+            System.out.println("How many Hoodies would you like to buy?");
+        }
+        else if(a == 2 && f == 1){
+            System.out.println("How many Pajamas would you like to buy?");
+        }
+        else if(a == 3 && f == 1){
+            System.out.println("Would you like to buy [1]Shirts or [2]Skirts?");
+            int x = in.nextInt();
+            if(x == 1){
+                System.out.println("How many Shirts would you like to buy?");
+            }
+            else if(x == 2){
+                System.out.println("How many Skirts would you like to buy?");
+            }
+            else{
+                System.exit(0);
+            }
+        }
+        else if(a == 4 && f == 1){
+            System.out.println("How many Trousers would you like to buy?");
+        }
+        else if(a == 5 && f == 1){
+            System.out.println("How many pairs of Denim Clothing would you like to buy?");
+        }
+        else if(a == 6 && f == 1){
+            System.out.println("How many pairs of Footwear would you like to buy?");
         }
     }
 }
