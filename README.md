@@ -1,5 +1,5 @@
 # Freshman Year
-random java files I created during Freshman Year 
+who knew I'd create these many files in Java?
 
-they contain all kinds of stuff, curricular and extra-curricular
-some were my own, and others with my friends :D
+
+_Java still trash btw_
